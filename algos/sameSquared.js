@@ -14,9 +14,10 @@ function same(arr1, arr2) {
         if (correctIndex === -1) {
             return false;
         }
+        console.log(arr2)
         arr2.splice(correctIndex, 1)
     }
     return true    
 }
 
-console.log(same([1,2,3], [1,9,4]))
+console.log(same([1,2,3,4,8], [64,1,16,9,4]))
