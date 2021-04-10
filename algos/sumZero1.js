@@ -4,6 +4,8 @@
 // sumZero([-2, 0, 1, 3]) // undefined
 // sumZero([1, 2, 3]) // undefined
 
+//this isn't best solution, time complex is o(n^2), quadratic, and not the best. Try again for O(n)
+
 function sumZero(arr) {
 
     for (let i = 0; i < arr.length; i++) {
@@ -15,6 +17,6 @@ function sumZero(arr) {
     }
 }
 
-console.log(sumZero([-3, -2, -1, 0, 1, 2, 3]))
+console.log(sumZero([-4, -2, -1, 0, 1, 2, 3, 5, 6]))
 console.log(sumZero([-2, 0, 1, 3]))
 
