@@ -19,4 +19,4 @@ function sumZero(arr) {
     }
 }
 
-console.log(sumZero([-3, -2, -1, 0, 1, 2, 3]))
+console.log(sumZero([-4, -3, -2, -1, 0 , 5, 7, 10]))
