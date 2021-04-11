@@ -12,14 +12,15 @@ function countUniqueValues(arr) {
         if (arr[left] === arr[right]) {
             arr.splice(right, 1)
         } else {
-            left++, right ++
-        } 
+            left++, right++
+        }
     }
     return arr.length
 }
 
-console.log(countUniqueValues([1,1,1,2,2,3,4,5,5]))
-console.log(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]))
+console.log(countUniqueValues([1, 1, 1, 2, 2, 3, 4, 5, 5]))
+console.log(countUniqueValues([1, 2, 3, 4, 4, 4, 7, 7, 12, 12, 13]))
+console.log(countUniqueValues([]))
 
 // [1,1,1,2,2,3,4,5,5]
 
@@ -41,3 +42,16 @@ console.log(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]))
 5 vs 5
 [1,2,3,4,5] 
 */
+
+function countUniqueValues2(arr) {
+    let i = 0
+    for (let j = 1; j < arr.length; j++) {
+        if (arr[i] !== arr[j]) {
+            i++;
+            arr[i] = arr[j]
+        }
+    }
+    return i + 1
+}
+
+console.log(countUniqueValues2([1,1,2,5,5,7,8,11,11,11,14,83,83]))
