@@ -19,6 +19,8 @@ function searchLinear(arr, n) {
 
 // intro to binary search, taking large sets of data and breaking into smaller chuncks of data to speed searches. 
 
+// Dividing and conquering!
+
 // Time complexity - Log(N) -this is binary search!
 function search(arr, n) {
     let min = 0
