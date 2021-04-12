@@ -27,6 +27,23 @@ function areThereDuplicates() {
     }
      return false;
 }
-console.log(areThereDuplicates(1,2,3)) // false
-console.log(areThereDuplicates(1,2,2)) // true
-console.log(areThereDuplicates('a','b','c', 'a')) // true
+
+
+function areThereDupes(...args) {
+    args.sort();
+    let i = 0;
+    let j = 1;
+    while(j < args.length) {
+        console.log(args)
+        if(args[i] === args[j]) {
+            return true;
+        } else {
+            i++, j++;
+        }   
+    }
+    return false;
+}
+
+console.log(areThereDupes(1,2,3)) // false
+console.log(areThereDupes(1,2,2)) // true
+console.log(areThereDupes('a', 'b', 'c', 'a')) // true
