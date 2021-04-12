@@ -28,7 +28,7 @@ function areThereDuplicates() {
      return false;
 }
 
-
+// MULTIPLE POINTERS
 function areThereDupes(...args) {
     args.sort();
     let i = 0;
