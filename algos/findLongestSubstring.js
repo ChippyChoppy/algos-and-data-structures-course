@@ -10,3 +10,7 @@ findLongestSubstring('thecatinthehat') // 7
 findLongestSubstring('bbbbbbb') // 1
 findLongestSubstring('longestsubstring') // 8
 */
+
+function findLongestSubstring() {
+    
+}
