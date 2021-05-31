@@ -18,14 +18,14 @@ function maxSubarraySum(arr, n) {
     }
     let max = -Infinity;
     for (let i = 0; i < arr.length - n + 1; i++) {
-        temp = 0;
+        temporary = 0;
         for (let j = 0; j < n; j++) {
-            temp += arr[i + j];
+            temporary += arr[i + j];
         }
-        if (temp > max) {
-            max = temp;
+        if (temporary > max) {
+            max = temporary;
         }
-        console.log(temp, max)
+        console.log(temporary, max)
     }
     return max;
 }
@@ -37,15 +37,15 @@ function maxSubarraySum(arr, n) {
 
 function maxSubarraySum2(arr, n) {
     let maxSum = 0;
-    let tempSum = 0;
+    let temporarySum = 0;
     if (arr.length < n) return null;
     for (let i = 0; i < n; i++) {
         maxSum += arr[i];
     }
-    tempSum = maxSum;
+    temporarySum = maxSum;
     for (let i = n; i < arr.length; i++) {
-        tempSum = tempSum - arr[i - n ] + arr[i];
-        maxSum = Math.max(maxSum, tempSum);
+        temporarySum = temporarySum - arr[i - n ] + arr[i];
+        maxSum = Math.max(maxSum, temporarySum);
     }
     return maxSum;
 }
