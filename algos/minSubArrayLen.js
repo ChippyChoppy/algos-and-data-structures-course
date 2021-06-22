@@ -13,5 +13,29 @@ minSubArrayLen([1,4,16,22,5,7,8,9,10], 95)
 */
 
 function minSubArrayLen(arr, int) {
+   let total = 0;
+   let start = 0;
+   let end = 0;
+   let minLen = Infinity;
+   
+   while (start < arr.length) {
+       // if current window doesn't add up to int move window to the right
+       if (total < int && end < arr.length) {
+           total += arr[end];
+           end++;
+       } 
+       // if current window adds to at least int, then try shrinking window
+       else if (total >= int) {
+           minLen = Math.min(minLen, end-start);
+           total -= arr[start];
+           start++;
+       }
+       // current total less than required total, but reach end 
+       else {
+           break;
+       }
+   }
+   return minLen === Infinity ? 0 : minLen;
+}    
 
-}
+console.log(minSubArrayLen([2,3,1,2,4,3], 7))

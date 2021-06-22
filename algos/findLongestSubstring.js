@@ -11,6 +11,21 @@ findLongestSubstring('bbbbbbb') // 1
 findLongestSubstring('longestsubstring') // 8
 */
 
-function findLongestSubstring() {
-    
+function findLongestSubstring(str) {
+    let longest = 0;
+    let subStr = {};
+    let start = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i];
+        if (subStr[char]) {
+            start = Math.max(start, subStr[char]);
+        }
+        longest = Math.max(longest, i - start + 1);
+
+        subStr[char] = i + 1;
+    }
+    return longest;
 }
+
+console.log(findLongestSubstring('rithmschool') )
