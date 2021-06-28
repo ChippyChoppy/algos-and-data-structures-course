@@ -10,7 +10,7 @@ const reverse = (str) => {
     return reverse(str.slice(1)) + str[0]
 }
 
-console.log(reverse('whoop'))
+console.log(reverse(["h","e","l","l","o"]))
 /* pooh + w 
 poo + h
 po + o 
@@ -18,3 +18,14 @@ p + o
 [] + p
 p o o h w
 */
+
+const nrReverse = (str) => {
+    if(str.length <= 1) return str;
+    let reverseStr = [];
+    for(let i = 0; i < str.length; i++) {
+        reverseStr.unshift(str[i])
+    }        return reverseStr.join("")
+
+}
+
+console.log(nrReverse('whoop'))
