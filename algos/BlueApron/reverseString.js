@@ -12,6 +12,12 @@ function reverse(str) {
 }
 console.log(reverse('blue'))
 
+function reverseAgain(str) {
+  return str.split('').reverse().join('')
+}
+console.log(reverseAgain('holy moly'))
+
+
 /* hello
 ello + h
 llo + e
