@@ -7,3 +7,6 @@ const power = function(base, exponent) {
 };
 
 console.log(power(2, 10));
+
+
+console.log(Math.floor(8/4))
