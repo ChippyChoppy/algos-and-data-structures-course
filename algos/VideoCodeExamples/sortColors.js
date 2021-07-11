@@ -20,9 +20,9 @@ const sortColors = (nums) => {
                 nums[i+1] = tempMax
             }
         }
-        console.log(nums)
+        console.log("log",nums)
     }
     return nums
 }
 
-sortColors([2,1,0,2,1])
+console.log(sortColors([1,0,1,1,2,0]))
