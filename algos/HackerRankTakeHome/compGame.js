@@ -5,13 +5,13 @@ function winners(place, scores) {
         // console.log(scores)
         placesObj[score] ? placesObj[score] += 1 : placesObj[score] = 1
     })  
-
-   let sortedCountedWinners = Object.entries(placesObj).sort((a,b) => b[0]-a[0])
-   console.log(sortedCountedWinners)
+// sort((a,b) => b[0]-a[0])
+//    console.log(sortedCountedWinners[0])
+   let sortedCountedWinners = Object.entries(placesObj).reverse()
     for(let i = 0; i < sortedCountedWinners.length; i++) {
         if (sortedCountedWinners[i][0] === '0') {
             sortedCountedWinners[i][1] = 0
-            console.log(sortedCountedWinners)
+            // console.log(sortedCountedWinners)
         }
         if (winners <= place) {
             winners += sortedCountedWinners[i][1]
