@@ -42,14 +42,7 @@ var calculate = function(s) {
             total -= rightNum
         }
     }
-    // operatorArray.forEach((operator, i) => {
-    //     leftNum = parseInt(numsArray[i+1])
-    //     if (operator === '+') {
-    //         total += leftNum
-    //     } else {
-    //         total -= leftNum
-    //     }
-    // })
+    
     console.log(total)
 };
 
