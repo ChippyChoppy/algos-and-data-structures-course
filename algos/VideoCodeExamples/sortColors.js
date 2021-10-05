@@ -12,7 +12,7 @@ const sortColors = (nums) => {
     let sorted = false;
     while (!sorted) {
         sorted = true;
-        for (let i = 0; i < nums.length; i++) {
+        for (let i = 0; i < nums.length - 1; i++) {
             let tempMax = 0;
             if (nums[i] > nums[i + 1]) {
                 sorted = false
@@ -21,7 +21,6 @@ const sortColors = (nums) => {
                 nums[i + 1] = tempMax
             }
             console.log(`i = ${i} --> ${nums[i]} > ${nums[i + 1]} `, nums)
-
         }
         console.log(`loop`, nums)
         console.log(sorted)
