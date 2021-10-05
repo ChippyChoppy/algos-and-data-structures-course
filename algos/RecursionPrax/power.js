@@ -3,6 +3,8 @@
 
 function power(base, exp) {
     if (exp === 0) return 1;
+    let i = 1
+    console.log(base, "*", power(base,exp-1), "=", base * power(base,exp-1) )
     return base * power(base, exp-1);
 }
 

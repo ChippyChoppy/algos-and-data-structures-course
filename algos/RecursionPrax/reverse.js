@@ -16,7 +16,11 @@ poo + h
 po + o 
 p + o 
 [] + p
-p o o h w
+p 
+po 
+poo 
+pooh 
+poohw
 */
 
 const nrReverse = (str) => {
